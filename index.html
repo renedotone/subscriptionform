@@ -5,28 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Form</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src=""></script>
 </head>
     <body>
-        <form action="myscript.php" method="POST">
-            Voornaam:<br>    
-            <input type="text" name="voornaam"><br>
-            Achternaam:<br>
-            <input type="text" name="achternaam"><br>
-            Leeftijd:<br>
-            <input type="number" name="leeftijd"><br>
-            Woonplaats:<br>
-            <input type="text" name="woonplaats"><br>
-            Soort abonnement:<br>
-            <select name="soort" name="soort">
-                <option value="geenkeuze">Maak een keuze</option>
-                <option value="weekend">Alleen weekend</option>
-                <option value="overdag">Alleen overdag</option>
-                <option value="altijd">Altijd</option>
-            </select><br>
-            <br>
-            <input type="submit" value="Word lid">
-        </form> 
+        <div class="content">
+            <h2>Inschrijven Sportschool</h2>
+            <form action="myscript.php" method="POST">
+                Voornaam:<br>    
+                <input type="text" name="voornaam"><br>
+                Achternaam:<br>
+                <input type="text" name="achternaam"><br>
+                Leeftijd:<br>
+                <input type="number" name="leeftijd" required><br>
+                Woonplaats:<br>
+                <input type="text" name="woonplaats"><br>
+                Soort abonnement:<br>
+                <select name="soort" name="soort">
+                    <option value="geenkeuze">Maak een keuze</option>
+                    <option value="weekend">Alleen weekend</option>
+                    <option value="overdag">Alleen overdag</option>
+                    <option value="altijd">Altijd</option>
+                </select><br>
+                <br>
+                <input type="submit" value="Word lid">
+            </form>
+        </div> 
     </body>
 </html>
