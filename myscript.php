@@ -27,7 +27,17 @@
         }
     }
     
-    echo $teBetalen;
+    if(($abbo == "altijd" || $abbo == "overdag" || $abbo == "weekend") && $leeftijd > 11){
+        echo $teBetalen;
+    }
+
+    if(($abbo == "altijd" || $abbo == "overdag" || $abbo == "weekend") && $leeftijd < 12){
+        print("De minimumleeftijd is 12 jaar, u kunt geen lid worden.");
+    }
+
+    if($abbo == "geenkeuze"){
+        print("U heeft geen abonnement gekozen.");
+    }
 
 
     // Altijd = 100 wel korting
