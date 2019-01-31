@@ -25,15 +25,15 @@
             
             $teBetalen = $prijsAltijd;
 
-            if($abbo == "weekend"){
+            if($abbo === "weekend"){
                 $teBetalen = $prijsWeekend;
             }
 
-            if($abbo == "overdag"){
+            if($abbo === "overdag"){
                 $teBetalen = $prijsOverdag;
             }
 
-            if($abbo == "altijd" || $abbo == "overdag" ){
+            if($abbo === "altijd" || $abbo === "overdag" ){
                 if ($leeftijd < 18){
                     $teBetalen = $teBetalen * 0.5;
                 }
@@ -42,15 +42,15 @@
                 }
             }
             
-            if(($abbo == "altijd" || $abbo == "overdag" || $abbo == "weekend") && $leeftijd > 11){
+            if(($abbo === "altijd" || $abbo === "overdag" || $abbo === "weekend") && $leeftijd > 11){
                 echo "De prijs per maand is € $teBetalen.";
             }
 
-            if(($abbo == "altijd" || $abbo == "overdag" || $abbo == "weekend") && $leeftijd < 12){
+            if(($abbo === "altijd" || $abbo === "overdag" || $abbo === "weekend") && $leeftijd < 12){
                 print("De minimumleeftijd is 12 jaar, u kunt geen lid worden.");
             }
 
-            if($abbo == "geenkeuze"){
+            if($abbo === "geenkeuze"){
                 print("U heeft geen abonnement gekozen.");
             }
 
